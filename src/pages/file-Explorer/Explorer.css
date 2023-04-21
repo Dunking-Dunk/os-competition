@@ -9,6 +9,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+   
 }
 
 .explore__container__sub {
@@ -86,10 +87,12 @@
 
 .explore__main {
     grid-column: 2;
+
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    height:80rem;
+    height: 70rem;
+
 }
 
 .explore__sidebar {

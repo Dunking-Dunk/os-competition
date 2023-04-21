@@ -65,12 +65,12 @@ extend({ WaveMaterial })
     )
 }
 
-const particles = Array.from({ length: 15 }, () => ({
+const particles = Array.from({ length: 10 }, () => ({
   factor: MathUtils.randInt(20, 100),
   speed: MathUtils.randFloat(0.01, 1),
-  xFactor: MathUtils.randFloatSpread(80),
-  yFactor: MathUtils.randFloatSpread(40),
-  zFactor: MathUtils.randFloatSpread(40)
+  xFactor: MathUtils.randFloatSpread(40),
+  yFactor: MathUtils.randFloatSpread(20),
+  zFactor: MathUtils.randFloatSpread(20)
 }))
 
 const Moon = ({ darkMode }) => {
@@ -78,8 +78,8 @@ const Moon = ({ darkMode }) => {
   useFrame((state, delta) => void (ref.current.rotation.y = MathUtils.damp(ref.current.rotation.y, (-state.mouse.x * Math.PI) / 6, 2.75, delta)))
 
   return (
-    <Instances limit={particles.length} ref={ref} castShadow receiveShadow position={[0, 10, 0]}>
-       <sphereGeometry args={[0.2, 10, 8]} />
+    <Instances limit={particles.length} ref={ref} castShadow receiveShadow position={[0, 0, 0]}>
+       <sphereGeometry args={[0.1, 10, 8]} />
         <meshBasicMaterial color={darkMode ? 'white' : 'black'} />
       {particles.map((data, i) => <MoonObj {...data} key={i} />
     )}
@@ -95,7 +95,7 @@ const MoonObj = ({ factor, speed, xFactor, yFactor, zFactor }) => {
     const t = factor + state.clock.elapsedTime * (speed / 2)
     ref.current.scale.setScalar(Math.max(1.5, Math.cos(t) * 5))
     ref.current.position.set(
-      (Math.cos(t) + Math.sin(t * 1) / 10 + xFactor + Math.cos((t / 10) * factor) + (Math.sin(t * 1) * factor) / 10) / 10,
+      (Math.cos(t) + Math.sin(t * 1) / 10 + xFactor + Math.cos((t / 10) * factor) + (Math.sin(t * 1) * factor) / 10) / 5,
       (Math.sin(t) + Math.cos(t * 2) / 10 + yFactor + Math.sin((t / 10) * factor) + (Math.cos(t * 2) * factor) / 10) / 5,
       (Math.sin(t) + Math.cos(t * 2) / 10 + zFactor + Math.cos((t / 10) * factor) + (Math.sin(t * 3) * factor) / 10) / 5
     )
@@ -150,7 +150,7 @@ const HomeCanvas = () => {
        
      
        
-      <OrbitControls autoRotate={true}  maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+      <OrbitControls autoRotate={true} enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
 
           <Moon darkMode={darkMode}/>
         <Sphere darkMode={darkMode} />
