@@ -14,6 +14,7 @@ color: white;
 }
 
 .gallery__container.dark {
+  color: black;
   background: #FF0099; 
 background: -webkit-linear-gradient(to top, #000000, #FF0099); 
 background: linear-gradient(to top, #0000004d 70%, #FF0099); 

@@ -22,7 +22,7 @@ const Taskbar = () => {
         setInterval(() => {
             setTime(moment().format('h:mm:ss a'))
         }, 1000)
-        document.querySelector('canvas').addEventListener('click', () => {
+        document.querySelector('canvas')?.addEventListener('click', () => {
             setOpen(false)
         })
     }, [])
@@ -30,8 +30,8 @@ const Taskbar = () => {
 
     return (
         <>
-                <div className='taskbar'>
-            <div className='taskbar__container'>
+                <div className={darkMode ? 'taskbar dark': 'taskbar'}>
+            <div className={'taskbar__container'}>
                 <div className='taskbar__files'>
                     <Link to={'/'}>
                     <File url='./file_images/house.png' />

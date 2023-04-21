@@ -14,6 +14,7 @@ function App() {
     <div className={darkMode ? "App dark" : "App"}>
       <div className="root__container">
         <LoaderScreen />
+        
         <BrowserRouter>
           <Routes>
             <Route element={<HomeScreen />} path="/" />

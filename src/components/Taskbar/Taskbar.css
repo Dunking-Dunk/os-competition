@@ -4,8 +4,12 @@
     left: 2rem;
     right: 2rem;
     border-radius: 2.5rem;
-    background-color: rgba(217,217,217,0.15);
+    background-color: rgba(217,217,217,0.5);
   z-index: 10;
+}
+
+.taskbar.dark {
+    background-color: rgba(217,217,217,0.15);
 }
 
 .taskbar__container {
@@ -88,7 +92,7 @@ box-shadow: 0px 15px 30px rgba(0,0,0,1);
     right: 3rem;
     bottom: 10rem;
     width:40rem;
-    height: 35rem;
+  
     background-color: rgba(0,0,0,0.5);
     z-index: 10;
     border-radius: 2rem;
@@ -116,9 +120,9 @@ box-shadow: 0px 15px 30px rgba(0,0,0,1);
     gap: 2rem;
     position: absolute;
     right: 3rem;
-    top: 5rem;
+    top: 4rem;
     width:40rem;
-    height:50rem;
+    height:40rem;
     background-color: rgba(0,0,0,0.5);
     z-index: 10;
     border-radius: 2rem;

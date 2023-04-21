@@ -23,6 +23,7 @@ const Home = () => {
                     <Spotify />
                     <Gallery/>
                 </div>
+                {/* <CursorCanvas className='curson__canvas'/> */}
                 <HomeCanvas />
                 {darkMode &&   <BackgroundGradient/> }
              
