@@ -1,0 +1,85 @@
+.spotify__container {
+        position: absolute;
+        z-index: 4;
+        border-radius: 2rem;
+        top: 10rem;
+        right: 15rem;
+        width: 25rem;
+        background: #000000;  
+    background: -webkit-linear-gradient(to top, #000000 70%, #000000);  
+    background: linear-gradient(to top, #0000004d 70%, #000000); 
+        padding: 1rem 1.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        color: white;
+}
+
+.spotify__container.dark {
+    background: #FF0099;  
+    background: -webkit-linear-gradient(to top, #000000 70%, #FF0099);  
+    background: linear-gradient(to top, #0000004d 70%, #FF0099); 
+   color: black;
+}
+
+.spotify__title {
+    font-size: 2rem;
+}
+
+.spotify__image {
+    width: 100%;
+    height: 20rem;
+    margin-bottom: 0.5rem;
+}
+
+.spotify__info__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spotify__info__title {
+    font-size: 1.7rem;
+}
+
+.spotify__info__artist {
+    font-size: 1rem;
+}
+
+.spotify__progress__bar {
+    position: relative;
+    width: 100%;
+    display: block;
+    height: 0.5rem;
+    background-color: #0000007e;
+    border-radius: 1rem;
+}
+
+.spotify__progress__sub-bar {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color:#FF0099 ;
+    transition: 0.35s linear;
+}
+
+.spotify__container__sub {
+    position: absolute;
+    bottom: -6rem;
+    width: 25rem;
+    height: 5rem;
+    background-color: #0000004d;
+    border-radius: 2rem;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+.spotify__container__sub__btn {
+    cursor: pointer;
+    color: var(--primary-color);
+}

@@ -1,0 +1,52 @@
+.calender__container {
+    z-index: 4;
+    position: absolute;
+    left: 10rem;
+    top: 10rem;
+    width: 24rem;
+    height: 30rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    transition: 0.35s ease;
+   
+}
+
+.calender__time {
+    border: 2px solid var(--primary-color);
+    height:75%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.calender__time__time {
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.calender__time__noon {
+    font-size: 7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+ 
+}
+
+.calender__date {
+    border: 2px solid var(--primary-color);
+    height: 25%;
+    border-radius: 1rem;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calender__date__date {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 100;
+}
