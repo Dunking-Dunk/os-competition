@@ -2,6 +2,7 @@ import './Spotify.css'
 import React, { useEffect, useRef, useState, useContext } from "react";
 import { AiFillPlayCircle, AiFillCaretLeft, AiFillCaretRight, AiFillPauseCircle } from 'react-icons/ai'
 import {DarkModeContext} from '../../context/darkModeContext'
+import starboyAudio from '../../assets/Starboy.mp3'
 
 const Spotify = () => {
     const {darkMode} = useContext(DarkModeContext)
@@ -13,9 +14,8 @@ const Spotify = () => {
     const [percent, setPercent] = useState(0)
 
     useEffect(() => {
-        const audio = new Audio('./starboy.mp3')
-        setAudio(audio)
-   
+        const audio = new Audio(starboyAudio)
+            setAudio(audio)
     }, [])
 
     const playAudio = () => {
